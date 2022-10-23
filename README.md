@@ -1,4 +1,4 @@
-#Primer pryecto de autenticaction con firebase..
+#Primer proyecto de autenticaction con firebase..
 
 Creado practicar y aprende. 
 
