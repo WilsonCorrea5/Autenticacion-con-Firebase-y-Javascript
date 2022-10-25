@@ -5,5 +5,9 @@ import './app/signupForm.js'
 import './app/logout.js'
 
 onAuthStateChanged(auth, async (user) => {
-    console.log(user)
+    if (user) {
+        condition
+    } else {
+        
+    }
 });
