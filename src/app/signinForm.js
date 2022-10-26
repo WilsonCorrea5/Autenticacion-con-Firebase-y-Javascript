@@ -16,7 +16,10 @@ signinForm.addEventListener('submit', async e =>{
         //close Sigin Modal and refresh
         const signinModal = document.querySelector('#signinModal')
         const modal = bootstrap.Modal.getInstance(signinModal)
+        //las lineas de arriba (17 y 18) se pueden hacer en una sola linea de codigo asi.
+        //const modal = bootstrap.Modal.getInstance(document.querySelector('#signinModal'))
         modal.hide()
+        showMessage('Bienvenido '+ credentials.user.email)
         
     } catch (error) {
         if (error.code === 'auth/user-not-found'){

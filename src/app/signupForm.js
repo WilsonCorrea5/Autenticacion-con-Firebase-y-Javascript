@@ -18,7 +18,7 @@ signupForm.addEventListener('submit', async (e) =>{
         const modal = bootstrap.Modal.getInstance(signupModal)
         modal.hide()
         
-        showMessage('Welcome ' + userCredentials.user.email)
+        showMessage('Bienvenido ' + userCredentials.user.email)
     } catch (error) {
         console.log(error.code, error.message)
 
