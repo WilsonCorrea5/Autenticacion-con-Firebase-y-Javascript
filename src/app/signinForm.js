@@ -1,5 +1,7 @@
 import { signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.12.1/firebase-auth.js"
 import { auth } from "./firebase.js"
+import { showMessage } from "./alertMessage.js"
+
 const signinForm = document.querySelector('#login-form')
 
 signinForm.addEventListener('submit', async e =>{
@@ -17,6 +19,13 @@ signinForm.addEventListener('submit', async e =>{
         modal.hide()
         
     } catch (error) {
-        console.log(error)
+        if (error.code === 'auth/user-not-found'){
+            showMessage('El correo ingresado no esta registrado', 'error')
+        }
+        else if (error.code === 'auth/wrong-password'){
+            showMessage('Contraseña incorrecta', 'error')
+        }
+        else{showMessage('Algo salio Mal', 'error')}
+        
     }
 })
