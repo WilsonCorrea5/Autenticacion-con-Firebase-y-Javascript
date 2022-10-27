@@ -14,7 +14,7 @@ googleButton.addEventListener('click', async () => {
 
         const modal = bootstrap.Modal.getInstance(document.querySelector('#signinModal'))
         modal.hide()
-        showMessage('Bienvenido ', + credentials.user.displayName)
+        showMessage('Bienvenido ' + credentials.user.displayName, 'success')
 
     } catch (error) {
         console.log(error)
